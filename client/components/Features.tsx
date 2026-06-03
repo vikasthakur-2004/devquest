@@ -1,3 +1,5 @@
+import { features } from "@/constants/features";
+
 export default function Features() {
   return (
     <section className="max-w-7xl mx-auto px-6 py-24">
@@ -12,28 +14,20 @@ export default function Features() {
       </div>
 
       <div className="grid md:grid-cols-3 gap-6 mt-16">
+        {features.map((feature) => (
+          <div
+            key={feature.title}
+            className="border border-zinc-800 rounded-2xl p-8 hover:border-blue-500 hover:-translate-y-2 transition-all duration-300"
+          >
+            <h3 className="text-2xl font-bold">
+              {feature.icon} {feature.title}
+            </h3>
 
-        <div className="border border-zinc-800 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold">🎯 Roadmaps</h3>
-          <p className="text-zinc-400 mt-4">
-            Structured learning paths from beginner to placement-ready.
-          </p>
-        </div>
-
-        <div className="border border-zinc-800 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold">🏆 Gamification</h3>
-          <p className="text-zinc-400 mt-4">
-            XP, streaks, achievements, levels, and leaderboards.
-          </p>
-        </div>
-
-        <div className="border border-zinc-800 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold">🤝 Mentorship</h3>
-          <p className="text-zinc-400 mt-4">
-            Connect with seniors who are ahead in the journey.
-          </p>
-        </div>
-
+            <p className="text-zinc-400 mt-4">
+              {feature.description}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );
