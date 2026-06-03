@@ -1,4 +1,6 @@
-export const features = [
+import { Feature } from "@/types";
+
+export const features: Feature[] = [
   {
     icon: "🎯",
     title: "Roadmaps",

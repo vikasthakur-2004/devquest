@@ -1,4 +1,6 @@
-export const journeyLevels = [
+import { JourneyLevel } from "@/types";
+
+export const journeyLevels: JourneyLevel[] = [
   {
     level: "Level 1",
     title: "Beginner",
