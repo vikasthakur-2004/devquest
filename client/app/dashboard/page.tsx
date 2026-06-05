@@ -1,3 +1,6 @@
+import Leaderboard from "@/components/Leaderboard";
+import Achievements from "@/components/Achievements";
+import Missions from "@/components/dashboard/Missions";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import RecentActivity from "@/components/dashboard/RecentActivity";
 import CurrentMission from "@/components/dashboard/CurrentMission";
@@ -21,7 +24,10 @@ export default function DashboardPage() {
       </div>
       <LevelProgress />
       <CurrentMission />
+      <Missions />
       <RecentActivity />
+      <Achievements />
+      <Leaderboard />
     </main>
     </DashboardLayout>
   );
