@@ -6,6 +6,11 @@ export const missions = [
     xp: 50,
     difficulty: "Easy",
     status: "Completed",
+    tasks: [
+      "Learn HTML Tags",
+      "Create First Web Page",
+      "Add Images and Links",
+    ],
   },
   {
     id: 2,
@@ -14,6 +19,11 @@ export const missions = [
     xp: 75,
     difficulty: "Medium",
     status: "In Progress",
+    tasks: [
+      "Learn Flexbox Concepts",
+      "Build Navigation Bar",
+      "Create Responsive Layout",
+    ],
   },
   {
     id: 3,
@@ -22,5 +32,10 @@ export const missions = [
     xp: 100,
     difficulty: "Hard",
     status: "Pending",
+    tasks: [
+      "Create Functional Components",
+      "Pass Props",
+      "Build Reusable UI",
+    ],
   },
 ];

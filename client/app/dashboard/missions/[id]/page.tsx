@@ -53,6 +53,50 @@ export default async function MissionDetailsPage({
 
         </div>
 
+        {/* Mission Tasks */}
+
+        <div className="border border-zinc-800 rounded-2xl p-8 mt-8">
+          <h2 className="text-2xl font-bold">
+            Mission Tasks
+          </h2>
+
+          <div className="space-y-4 mt-6">
+            {mission.tasks.map((task, index) => (
+              <div
+                key={index}
+                className="border border-zinc-800 rounded-xl p-4"
+              >
+                ⬜ {task}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Progress Section */}
+
+        <div className="border border-zinc-800 rounded-2xl p-8 mt-8">
+
+          <div className="flex justify-between">
+            <h2 className="text-2xl font-bold">
+              Progress
+            </h2>
+
+            <span>33%</span>
+          </div>
+
+          <div className="w-full h-4 bg-zinc-800 rounded-full mt-6 overflow-hidden">
+            <div
+              className="h-full bg-blue-500"
+              style={{ width: "33%" }}
+            />
+          </div>
+
+          <button className="mt-8 bg-green-500 hover:bg-green-600 transition px-6 py-3 rounded-xl font-semibold">
+            Mark Mission Complete
+          </button>
+
+        </div>
+
       </div>
     </main>
   );
