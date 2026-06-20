@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { navLinks } from "@/constants/navigation";
 export default function Navbar() {
   return (
@@ -19,9 +20,11 @@ export default function Navbar() {
           ))}
         </div>
 
-        <button className="bg-white text-black px-5 py-2 rounded-xl font-semibold hover:scale-105 transition duration-300">
-          Get Started
-        </button>
+        <Link href="/dashboard">
+          <button className="bg-white text-black px-5 py-2 rounded-xl font-semibold hover:scale-105 transition duration-300">
+            Get Started
+          </button>
+        </Link>
       </div>
     </nav>
   );

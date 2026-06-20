@@ -1,10 +1,23 @@
 "use client";
 
 import { useState } from "react";
+import { useParams } from "next/navigation";
 import { missions } from "@/constants/missions";
 
 export default function MissionDetailsPage() {
-  const mission = missions[0]; // Temporary
+  const params = useParams();
+
+  const mission = missions.find((m) => m.id === Number(params.id));
+
+  if (!mission) {
+  return (
+    <main className="min-h-screen bg-black text-white p-10">
+      <h1 className="text-4xl font-bold">
+        Mission Not Found ❌
+      </h1>
+    </main>
+  );
+}
 
   const [completedTasks, setCompletedTasks] = useState<number[]>([]);
 
@@ -84,6 +97,28 @@ export default function MissionDetailsPage() {
           >
             {isCompleted ? "Mission Completed 🎉" : "Complete All Tasks First"}
           </button>
+
+          {isCompleted && (
+            <div className="mt-8 border border-green-500/30 bg-green-500/10 rounded-2xl p-6">
+              <h2 className="text-2xl font-bold text-green-400">
+                🎉 Mission Completed!
+              </h2>
+
+              <p className="text-zinc-300 mt-3">
+                Congratulations! You have successfully completed this mission.
+              </p>
+
+              <div className="flex gap-4 mt-4">
+                <span className="bg-blue-500/20 text-blue-400 px-3 py-2 rounded-lg">
+                  +{mission.xp} XP Earned
+                </span>
+
+                <span className="bg-purple-500/20 text-purple-400 px-3 py-2 rounded-lg">
+                  Next Mission Unlocked
+                </span>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </main>
