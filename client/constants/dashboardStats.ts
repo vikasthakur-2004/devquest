@@ -1,18 +1,18 @@
 export const dashboardStats = [
   {
-    title: "Current Level",
+    title: "🏆 Current Level",
     value: "3",
   },
   {
-    title: "XP Earned",
+    title: "⚡ Total XP",
     value: "420",
   },
   {
-    title: "Current Streak",
-    value: "12 🔥",
+    title: "🔥 Learning Streak",
+    value: "12 Days",
   },
   {
-    title: "Completed Missions",
+    title: "✅ Missions Completed",
     value: "28",
   },
 ];
